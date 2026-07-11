@@ -16,6 +16,7 @@ import BookmarksPage from "@/pages/BookmarksPage";
 import AuthPage from "@/pages/AuthPage";
 import NotificationsPage from "@/pages/NotificationsPage";
 import ProfilePage from "@/pages/ProfilePage";
+import RecommendationPage from "@/pages/RecommendationPage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
