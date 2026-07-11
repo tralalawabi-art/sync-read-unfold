@@ -66,21 +66,21 @@ serve(async (req) => {
       },
     });
 
-    const contentType = response.headers.get('content-type') || '';
     const text = await response.text();
 
-    if (!contentType.includes('application/json')) {
+    try {
+      const json = JSON.parse(text);
+      return new Response(JSON.stringify(json), {
+        status: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    } catch {
       console.error('Non-JSON response:', text.substring(0, 500));
       return new Response(JSON.stringify({ error: 'Upstream returned non-JSON response', status: response.status }), {
         status: 502,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
     }
-
-    return new Response(text, {
-      status: 200,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
   } catch (error) {
     console.error('Proxy error:', error);
     return new Response(JSON.stringify({ error: error.message }), {
