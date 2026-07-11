@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Home, Flame, CheckCircle, Clock, Search, Bookmark, User, Bell } from "lucide-react";
+import { Home, Flame, CheckCircle, Clock, Search, Bookmark, User, Bell, BookOpen } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useNotifications } from "@/hooks/useNotifications";
 import { useState } from "react";
