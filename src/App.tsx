@@ -16,6 +16,7 @@ import BookmarksPage from "@/pages/BookmarksPage";
 import AuthPage from "@/pages/AuthPage";
 import NotificationsPage from "@/pages/NotificationsPage";
 import ProfilePage from "@/pages/ProfilePage";
+import RecommendationPage from "@/pages/RecommendationPage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const App = () => (
               <Route path="/auth" element={<AuthPage />} />
               <Route path="/notifications" element={<NotificationsPage />} />
               <Route path="/profile" element={<ProfilePage />} />
+              <Route path="/rekomendasi-manhwa" element={<RecommendationPage />} />
             </Route>
             <Route path="/read/:slug" element={<ReaderPage />} />
             <Route path="*" element={<NotFound />} />

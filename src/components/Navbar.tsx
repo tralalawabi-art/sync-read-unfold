@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Home, Flame, CheckCircle, Clock, Search, Bookmark, User, Bell } from "lucide-react";
+import { Home, Flame, CheckCircle, Clock, Search, Bookmark, User, Bell, BookOpen } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useNotifications } from "@/hooks/useNotifications";
 import { useState } from "react";
@@ -32,9 +32,9 @@ export function Navbar() {
                 alt="FmcComic"
                 className="w-9 h-9 rounded-xl object-cover border border-primary/50 shadow-lg shadow-primary/20 group-hover:scale-105 transition"
               />
-              <h1 className="text-2xl font-extrabold text-primary tracking-tight">
+              <span className="text-2xl font-extrabold text-primary tracking-tight">
                 Fmc<span className="text-foreground">Comic</span>
-              </h1>
+              </span>
             </Link>
 
             <div className="hidden md:flex gap-6 text-sm font-medium">
@@ -46,6 +46,9 @@ export function Navbar() {
               </Link>
               <Link to="/completed" className={`hover:text-primary transition ${location.pathname === "/completed" ? "text-primary" : ""}`}>
                 Selesai
+              </Link>
+              <Link to="/rekomendasi-manhwa" className={`hover:text-primary transition ${location.pathname === "/rekomendasi-manhwa" ? "text-primary" : ""}`}>
+                Rekomendasi
               </Link>
             </div>
           </div>
@@ -110,6 +113,10 @@ export function Navbar() {
         <Link to="/history" className={`flex flex-col items-center gap-1 w-16 ${location.pathname === "/history" ? "text-primary" : "text-muted-foreground"}`}>
           <Clock className="w-5 h-5" />
           <span className="text-[10px]">Riwayat</span>
+        </Link>
+        <Link to="/rekomendasi-manhwa" className={`flex flex-col items-center gap-1 w-16 ${location.pathname === "/rekomendasi-manhwa" ? "text-primary" : "text-muted-foreground"}`}>
+          <BookOpen className="w-5 h-5 text-primary" />
+          <span className="text-[10px]">Rekom</span>
         </Link>
         {user && (
           <Link to="/notifications" className={`flex flex-col items-center gap-1 w-16 relative ${location.pathname === "/notifications" ? "text-primary" : "text-muted-foreground"}`}>
