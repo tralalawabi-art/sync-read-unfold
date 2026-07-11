@@ -47,6 +47,9 @@ export function Navbar() {
               <Link to="/completed" className={`hover:text-primary transition ${location.pathname === "/completed" ? "text-primary" : ""}`}>
                 Selesai
               </Link>
+              <Link to="/rekomendasi-manhwa" className={`hover:text-primary transition ${location.pathname === "/rekomendasi-manhwa" ? "text-primary" : ""}`}>
+                Rekomendasi
+              </Link>
             </div>
           </div>
 
