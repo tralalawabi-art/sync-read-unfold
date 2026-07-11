@@ -114,6 +114,10 @@ export function Navbar() {
           <Clock className="w-5 h-5" />
           <span className="text-[10px]">Riwayat</span>
         </Link>
+        <Link to="/rekomendasi-manhwa" className={`flex flex-col items-center gap-1 w-16 ${location.pathname === "/rekomendasi-manhwa" ? "text-primary" : "text-muted-foreground"}`}>
+          <BookOpen className="w-5 h-5 text-primary" />
+          <span className="text-[10px]">Rekom</span>
+        </Link>
         {user && (
           <Link to="/notifications" className={`flex flex-col items-center gap-1 w-16 relative ${location.pathname === "/notifications" ? "text-primary" : "text-muted-foreground"}`}>
             <Bell className="w-5 h-5" />
