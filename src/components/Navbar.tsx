@@ -32,9 +32,9 @@ export function Navbar() {
                 alt="FmcComic"
                 className="w-9 h-9 rounded-xl object-cover border border-primary/50 shadow-lg shadow-primary/20 group-hover:scale-105 transition"
               />
-              <h1 className="text-2xl font-extrabold text-primary tracking-tight">
+              <span className="text-2xl font-extrabold text-primary tracking-tight">
                 Fmc<span className="text-foreground">Comic</span>
-              </h1>
+              </span>
             </Link>
 
             <div className="hidden md:flex gap-6 text-sm font-medium">
