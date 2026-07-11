@@ -40,6 +40,7 @@ const App = () => (
               <Route path="/auth" element={<AuthPage />} />
               <Route path="/notifications" element={<NotificationsPage />} />
               <Route path="/profile" element={<ProfilePage />} />
+              <Route path="/rekomendasi-manhwa" element={<RecommendationPage />} />
             </Route>
             <Route path="/read/:slug" element={<ReaderPage />} />
             <Route path="*" element={<NotFound />} />
