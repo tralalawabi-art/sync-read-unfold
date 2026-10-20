@@ -5,7 +5,7 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version',
 };
 
-const API_BASE = "https://komikindo.aoxi.my.id/comic/komikindo";
+const API_BASE = "https://www.sankavollerei.web.id/comic/komikindo";
 
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
@@ -62,7 +62,7 @@ serve(async (req) => {
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
         'Accept': 'application/json, text/plain, */*',
-        'Referer': 'https://komikindo.aoxi.my.id/',
+        'Referer': 'https://www.sankavollerei.web.id/',
       },
     });
 
